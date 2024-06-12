@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import viteLogo from "/vite.svg";
 
 import "./Header.css";
@@ -7,13 +8,17 @@ function Header(props) {
   console.log("props :", props.age, props.name);
   return (
     <nav className="globalNav">
-      <a href="https://vitejs.dev" target="_blank">
+      <Link to="/">
         <img src={viteLogo} className="logo" alt="Vite logo" />
-      </a>
+      </Link>
       <div className="info">firstname : {props.name}</div>
       <ul>
-        <li>Home</li>
-        <li>Characters</li>
+        <li>
+          <Link to="/home"> Home</Link>
+        </li>
+        <li>
+          <Link to="/characters"> Characters</Link>
+        </li>
         <li>Contact</li>
       </ul>
     </nav>
