@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import Characters from "./pages/Characters.jsx";
+import CharactersDetails from "./components/CharactersDetails.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/characters",
     element: <Characters />,
+  },
+  {
+    path: "/characters/:id",
+    element: <CharactersDetails />,
   },
 ]);
 

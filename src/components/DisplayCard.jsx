@@ -1,9 +1,14 @@
-function DisplayCard({ name, image }) {
+import { Link } from "react-router-dom";
+
+function DisplayCard({ name, image, id }) {
+  const urlCharacter = `/characters/${id}`;
   return (
-    <div className="globalCard">
-      <img src={image} alt={name} />
-      <p>{name}</p>
-    </div>
+    <Link to={urlCharacter}>
+      <div className="globalCard">
+        <img src={image} alt={name} />
+        <p>{name}</p>
+      </div>
+    </Link>
   );
 }
 
